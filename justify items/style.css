@@ -1,0 +1,45 @@
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+html, body {
+  box-sizing: border-box;
+  background-color: #ffeead;
+  height: 100%;
+  padding: 10px;
+  margin: 0px;
+}
+.container > div:nth-child(1n) {
+    background-color: #3ae374;
+}
+.container > div:nth-child(2n) {
+    background-color: #7d5fff;
+}
+.container > div:nth-child(3n) {
+    background-color: #ff3838;
+}
+.container > div:nth-child(4n) {
+    background-color: #fff200;
+}
+.container {
+    display: grid;
+    height: 100%;
+    gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 60px auto 60px;
+}
+.header {
+    grid-column: 1/ -1;
+}
+.menu {
+    grid-column: 1/4;
+}
+.content{
+    grid-column: 4/ -1;
+}
+.footer {
+    grid-column: 1/-1;
+}
